@@ -31,9 +31,21 @@
                                     <action selector="shareToTwitter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I7O-fw-nPc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJL-L7-2vz">
+                                <rect key="frame" x="240" y="350" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kFF-vZ-nnf"/>
+                                </constraints>
+                                <state key="normal" title="系统自带分享功能"/>
+                                <connections>
+                                    <action selector="systemShare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xd1-gE-u2i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="EJL-L7-2vz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="91G-gw-ibC"/>
+                            <constraint firstItem="EJL-L7-2vz" firstAttribute="top" secondItem="KNJ-NC-S7b" secondAttribute="bottom" constant="35" id="97v-2A-emR"/>
                             <constraint firstItem="KNJ-NC-S7b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r09-K0-sZR"/>
                             <constraint firstItem="KNJ-NC-S7b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yF3-P4-ElT"/>
                         </constraints>

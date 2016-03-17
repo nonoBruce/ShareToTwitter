@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <TwitterKit/TwitterKit.h>
-
+#import <Social/Social.h>
 
 @interface ViewController ()
 
@@ -27,8 +27,12 @@
 //            NSLog(@"error: %@", [error localizedDescription]);
 //        }
 //    }];
-//    logInButton.center = self.view.center;
+//    logInButton.center = CGPointMake(self.view.center.x, self.view.center.y-100);
 //    [self.view addSubview:logInButton];
+    
+    
+    
+//    shuffle
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,6 +77,21 @@
     
 }
 
+- (IBAction)systemShare:(id)sender {
+
+    NSString *shareText = @"All sad people like poetry,happy people like songs #peotry";
+    UIImage *image = [UIImage imageNamed:@"demo_image.jpg"];
+    NSURL *urlToShare = [NSURL URLWithString:@"http://gamebegin.com"];
+    NSArray *activityItems = @[shareText,image, urlToShare];
+
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc]
+                                            initWithActivityItems:activityItems
+                                            applicationActivities:nil];
+
+    [self presentViewController:activityVC animated:YES completion:nil];
+
+}
+
 - (BOOL)schemeAvailable:(NSString *)scheme {
     NSURL *url = [NSURL URLWithString:scheme];
     if(url){
@@ -81,6 +100,12 @@
         return NO;
     }
 }
+
+
+#pragma mark - share
+
+
+
 
 
 @end
